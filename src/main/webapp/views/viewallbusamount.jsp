@@ -42,34 +42,25 @@
     <thead>
                         <tr>
                             <th scope="col">Email id</th>
-                            <th scope="col">First Name</th>
-                             <th scope="col">Last Name</th>
+                            <th scope="col">Full Name</th>
+                             <th scope="col">Address</th>
                             
-                             <th scope="col">Phone number</th>
-                             
-                              <th scope="col">Lender Name</th>
-                                <th scope="col">Loan Amount</th>
-                              
-                               <th scope="col">Capital</th>
+                             <th scope="col">Type of Loan</th>
+                              <th scope="col">Amount paid</th>
                               
                            
                           <!--   <th scope="col">Action</th>-->
                         </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="eddy" items="${voterdata}">
+                    <c:forEach var="bamo" items="${voterdata}">
                     <tr>
-                                <th scope="row">${eddy.email}</th>
-                                <td>${eddy.fname}</td>&nbsp;
-                                <td>${eddy.lname}</td>&nbsp;
-                               
-                                <td>${eddy.mno}</td>
-                                <td>${eddy.lenname}</td>
-                               
-                                <td>${eddy.lreq}</td>
-                                
-                                
-                                <td>${eddy.bear}</td>
+                                <th scope="row">${bamo.email}</th>
+                                <td>${bamo.fname}</td>&nbsp;
+                                <td>${bamo.sadd}</td>&nbsp;
+                               <td>${bamo.state}</td>
+                                <td>${bamo.zip}</td>
+                              
                                 <!--<td><a class="btn btn-outline-secondary" href="/employee/delete/${vote.sid}">Delete</a>-->
 
                                 

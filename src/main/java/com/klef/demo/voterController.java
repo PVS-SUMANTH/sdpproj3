@@ -148,6 +148,25 @@ public class voterController
 	        return mv;
 	      }
 		  
+		  @GetMapping("/educator")
+	      public ModelAndView viewalledu()
+	      {
+	        List<Eduloan> eduloan =eduloanservice.getallvoterrecords();
+	        ModelAndView mv = new ModelAndView();
+	        mv.setViewName("viewalledu");
+	        mv.addObject("voterdata",eduloan);
+	        return mv;
+	      }
+		  
+		  @GetMapping("/busamount")
+	      public ModelAndView busamount()
+	      {
+	        List<Payment> pay =payloanservice.getallvoterrecords();
+	        ModelAndView mv = new ModelAndView();
+	        mv.setViewName("viewallbusamount");
+	        mv.addObject("voterdata",pay);
+	        return mv;
+	      }
 		  
 		  
 		  
