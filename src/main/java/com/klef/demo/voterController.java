@@ -1,11 +1,12 @@
 package com.klef.demo;
 
-import java.util.*;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 @Controller
@@ -28,6 +29,8 @@ public class voterController
 		  GoldloanService goldloanservice;
 		  @Autowired
 		  PayloanService payloanservice;
+		  @Autowired
+		  validloanService validloanservice;
 		  
 		  
 		  
@@ -123,6 +126,40 @@ public class voterController
 		  return new ModelAndView("payment","paym",new Payment());
 		  }
 		  
+		  @PostMapping("/val1")
+		  public ModelAndView valid(@ModelAttribute("vdate") Valid valid)
+		  {
+			  System.out.println("val1"+valid.getUmail());
+			 
+			  ModelAndView mv = new ModelAndView();
+			  if(valid.getAdd().equals("Yes")&&valid.getAsses().equals("Yes")&&valid.getBus().equals("Yes")&&valid.getName().equals("Yes")) {
+				  valid.setStatus(1);
+				  validloanservice.add(valid);
+		    mv.setViewName("addsuccess");
+			  }
+			  else {
+				  validloanservice.add(valid);
+				    mv.setViewName("error"); 
+			  }
+		    
+		    return mv;
+		  }
+		  @GetMapping("/validation/{email}")
+		  public ModelAndView paioid(@PathVariable("email") String email)
+		  {
+			  System.out.println("controller"+email);
+			 
+			  Valid vdate=new Valid();
+			  vdate.setUmail(email);
+			  System.out.println(vdate.getUmail());
+			  vdate.setStatus(0);
+			  ModelAndView mv = new ModelAndView();
+			  mv.setViewName("validate");
+			  mv.addObject("vdate",vdate);
+			  return mv;
+			
+		  }
+		  
 		 /////////////////////////
 		  
 		  
@@ -169,7 +206,14 @@ public class voterController
 	      }
 		  
 		  
-		  
+//		  @GetMapping("/validation/{email}") 
+//		  public ModelAndView validateData(@PathVariable("email") String email) { 
+//		   ModelAndView mv=new ModelAndView(); 
+//		   mv.setViewName("validate"); 
+//		   mv.addObject("email",email); 
+//		   return mv; 
+//		    
+//		  }
 		  
 		  
 		  
@@ -206,6 +250,11 @@ public class voterController
 		  public ModelAndView application()
 		  {
 		  return new ModelAndView("application");
+		  }
+		  @GetMapping("/team")
+		  public ModelAndView applicationream()
+		  {
+		  return new ModelAndView("agent");
 		  }
 		  
 		  

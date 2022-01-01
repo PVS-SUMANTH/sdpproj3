@@ -72,8 +72,9 @@
                                 <td>${red.city}</td>
                                 <!--<td><a class="btn btn-outline-secondary" href="/employee/delete/${vote.sid}">Delete</a>-->
 
-                                
-                                    <!-- <a class="btn btn-outline-success" href="/employee/delete/${emp.id}">Update</a> -->
+                                <td>
+                                    <a class="styled-table" href="/validation/${red.email}">Validate</a>
+                                    </td>
                                     <!-- <a class="btn btn-outline-success" href="/employee/delete/${emp.id}">Update</a> -->
                                 </td>
                             </tr>

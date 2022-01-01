@@ -34,7 +34,7 @@
           <a href="#">
             <img width="30" src="assets/avatar.svg" alt="" />
             <!-- <i class="fa fa-user-circle-o" aria-hidden="true"></i> -->
-          </a>
+          </a>m 
         </div>
       </nav>
 
@@ -203,7 +203,44 @@
               ></i>
               <div class="card_inner">
                 <p class="text-primary-p">Number of loans completed</p>
-                <span class="font-bold text-title">(pending)</span>
+                <span class="font-bold text-title">
+                   	<%@page import="java.sql.*" %>
+
+<%
+  
+  try
+  {
+    Connection con=null;
+    Class.forName("com.mysql.jdbc.Driver");
+   // System.out.println("Driver class loaded");
+    con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sdp3","root","root");
+    Statement psmt=con.createStatement();
+    ResultSet rs=psmt.executeQuery("select count(*) from busloan");
+     int z=0,z1=0,z2=0;
+    if(rs.next())
+    {
+       z= rs.getInt(1);
+    }
+    Statement psmt1=con.createStatement();
+    ResultSet rs1=psmt.executeQuery("select sum(status) from valid1");
+    
+    if(rs1.next())
+    {
+       out.println(rs1.getInt(1));
+    }
+    
+   
+
+    
+  }
+    catch(Exception e)
+    {
+      out.println(e);
+    }
+
+
+%>
+                </span>
               </div>
             </div>
           </div>
@@ -239,7 +276,44 @@
 
                 <div class="card2">
                   <h1>Amounts Paid</h1>
-                  <p>??</p>
+                  <p>
+                  	<%@page import="java.sql.*" %>
+
+<%
+  
+  try
+  {
+    Connection con=null;
+    Class.forName("com.mysql.jdbc.Driver");
+   // System.out.println("Driver class loaded");
+    con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sdp3","root","root");
+    Statement psmt=con.createStatement();
+    ResultSet rs=psmt.executeQuery("select count(*) from busloan");
+     int z=0,z1=0,z2=0;
+    if(rs.next())
+    {
+       z= rs.getInt(1);
+    }
+    Statement psmt1=con.createStatement();
+    ResultSet rs1=psmt.executeQuery("select sum(zip) from payment");
+    
+    if(rs1.next())
+    {
+       out.println(rs1.getInt(1));
+    }
+    
+   
+
+    
+  }
+    catch(Exception e)
+    {
+      out.println(e);
+    }
+
+
+%>
+                  </p>
                 </div>
 
                 <div class="card3">
