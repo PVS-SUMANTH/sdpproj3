@@ -32,11 +32,11 @@
     <!-- Stylesheets
     ================================================== -->
     <!-- Bootstrap core CSS -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="resources/css/newstyle.css" rel="stylesheet">
-    <link href="resources/css/responsive.css" rel="stylesheet">
+    <link href="/resources/css/newstyle.css" rel="stylesheet">
+    <link href="/resources/css/responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -74,7 +74,7 @@
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                               <li><a href="/login">User</a></li>
                               <li><a href="/manage">Manager</a></li>
-                              <li><a href="#">Admin</a></li>
+                              <li><a href="/team">Validation TEam</a></li>
                               
                             </ul>
 
@@ -255,24 +255,27 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="portfolio-item">
-                            <img src="resources/images/mani.jpg" class="img-res" alt="">
+                            <img src="/resources/images/mani.jpg" class="img-res" alt="">
                             <h4 class="portfolio-item-title">Maneeshwar</h4>
                             <a href="portfolio-item.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div><!-- /.portfolio-item -->
                     </div>
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="portfolio-item">
-                            <img src="resources/images/summy.jpg" class="img-res" alt="">
+                            <img src="/resources/images/summy.jpg" class="img-res" alt="">
                             <h4 class="portfolio-item-title">Sumanth</h4>
                             <a href="portfolio-item.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div><!-- /.portfolio-item -->
                     </div>
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="portfolio-item">
-                            <img src="resources/images/lekha.jpg" class="img-res" alt="">
+                            <img src="/resources/images/lekha.jpg" class="img-res" alt="">
                             <h4 class="portfolio-item-title">Swarna Lekha</h4>
                             <a href="portfolio-item.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div><!-- /.portfolio-item -->
+                        
+                        
+                        <h1> Special Thanks to Group 336</h1>
                     <!-- </div>
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="portfolio-item">

@@ -120,7 +120,7 @@
             <h3>Total Amount</h3>
             <div class="value"></div>
           </div>
-
+ 
           <button class="calculate-btn">Calculate</button>
         </div>
 

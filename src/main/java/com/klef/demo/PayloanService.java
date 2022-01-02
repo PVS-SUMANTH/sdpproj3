@@ -14,5 +14,8 @@ public class PayloanService
 	payloanrepository.save(pay);
 	}
 	
-	  
+	public List<Payment> getallvoterrecords()
+    {
+      return (List<Payment>) payloanrepository.findAll();
+    }
 	}

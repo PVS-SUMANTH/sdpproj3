@@ -42,39 +42,29 @@
     <thead>
                         <tr>
                             <th scope="col">Email id</th>
-                            <th scope="col">First Name</th>
-                             <th scope="col">Last Name</th>
+                            <th scope="col">Full Name</th>
+                             <th scope="col">Address</th>
                             
-                             <th scope="col">Phone number</th>
-                              <th scope="col">Loan Amount</th>
-                              <th scope="col">Lender Name</th>
-                              <th scope="col">Project Gross Value</th>
-                               
-                              <th scope="col">Tencture Period</th>
+                             <th scope="col">Type of Loan</th>
+                              <th scope="col">Amount paid</th>
                               
                            
                           <!--   <th scope="col">Action</th>-->
                         </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="red" items="${voterdata}">
+                    <c:forEach var="bamo" items="${voterdata}">
                     <tr>
-                                <th scope="row">${red.email}</th>
-                                <td>${red.fname}</td>&nbsp;
-                                <td>${red.lname}</td>&nbsp;
-                               
-                                <td>${red.mno}</td>
-                                <td>${red.lamount}</td>
-                               
-                                <td>${red.lenname}</td>
-                                <td>${red.pval}</td>
-                                
-                                <td>${red.city}</td>
+                                <th scope="row">${bamo.email}</th>
+                                <td>${bamo.fname}</td>&nbsp;
+                                <td>${bamo.sadd}</td>&nbsp;
+                               <td>${bamo.state}</td>
+                                <td>${bamo.zip}</td>
+                              
                                 <!--<td><a class="btn btn-outline-secondary" href="/employee/delete/${vote.sid}">Delete</a>-->
 
-                                <td>
-                                    <a class="styled-table" href="/validation/${red.email}">Validate</a>
-                                    </td>
+                                
+                                    <!-- <a class="btn btn-outline-success" href="/employee/delete/${emp.id}">Update</a> -->
                                     <!-- <a class="btn btn-outline-success" href="/employee/delete/${emp.id}">Update</a> -->
                                 </td>
                             </tr>

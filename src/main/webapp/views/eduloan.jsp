@@ -119,9 +119,9 @@
         
         <h3 class="heading" for="lreq">Loan amount required</h3><br>
             <div class="label">
-             below 4.5 lakhs<form:radiobutton  class="rads1" path="lreq" value="below" /><br><br>
-             4.5 to 7.5 lakhs<form:radiobutton  class="rads2" path="lreq" value="equal" /><br><br>
-             7.5 lakhs and above<form:radiobutton  class="rads3" path="lreq" value="above" />
+             below 4.5 lakhs<form:radiobutton  class="rads1" path="lreq" value="below 4.5 lakhs" /><br><br>
+             4.5 to 7.5 lakhs<form:radiobutton  class="rads2" path="lreq" value=" 4.5 to 7.5 lakhs" /><br><br>
+             7.5 lakhs and above<form:radiobutton  class="rads3" path="lreq" value="7.5 lakhs and above" />
              
             </div>
             

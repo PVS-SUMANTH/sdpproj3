@@ -34,7 +34,7 @@
           <a href="#">
             <img width="30" src="assets/avatar.svg" alt="" />
             <!-- <i class="fa fa-user-circle-o" aria-hidden="true"></i> -->
-          </a>
+          </a>m 
         </div>
       </nav>
 
@@ -158,7 +158,7 @@
                 aria-hidden="true"
               ></i>
               <div class="card_inner">
-                <p class="text-primary-p">contacts</p>
+                <p class="text-primary-p">Amount Sactioned</p>
                 <span class="font-bold text-title">
                 <%@page import="java.sql.*" %>
 
@@ -203,7 +203,44 @@
               ></i>
               <div class="card_inner">
                 <p class="text-primary-p">Number of loans completed</p>
-                <span class="font-bold text-title">645</span>
+                <span class="font-bold text-title">
+                   	<%@page import="java.sql.*" %>
+
+<%
+  
+  try
+  {
+    Connection con=null;
+    Class.forName("com.mysql.jdbc.Driver");
+   // System.out.println("Driver class loaded");
+    con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sdp3","root","root");
+    Statement psmt=con.createStatement();
+    ResultSet rs=psmt.executeQuery("select count(*) from busloan");
+     int z=0,z1=0,z2=0;
+    if(rs.next())
+    {
+       z= rs.getInt(1);
+    }
+    Statement psmt1=con.createStatement();
+    ResultSet rs1=psmt.executeQuery("select sum(status) from valid1");
+    
+    if(rs1.next())
+    {
+       out.println(rs1.getInt(1));
+    }
+    
+   
+
+    
+  }
+    catch(Exception e)
+    {
+      out.println(e);
+    }
+
+
+%>
+                </span>
               </div>
             </div>
           </div>
@@ -233,23 +270,60 @@
 
               <div class="charts__right__cards">
                 <div class="card1">
-                  <h1>Income</h1>
-                  <p>$75,300</p>
+                  <h1>Amount Given</h1>
+                  <p>??</p>
                 </div>
 
                 <div class="card2">
-                  <h1>investment</h1>
-                  <p>$124,200</p>
+                  <h1>Amounts Paid</h1>
+                  <p>
+                  	<%@page import="java.sql.*" %>
+
+<%
+  
+  try
+  {
+    Connection con=null;
+    Class.forName("com.mysql.jdbc.Driver");
+   // System.out.println("Driver class loaded");
+    con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sdp3","root","root");
+    Statement psmt=con.createStatement();
+    ResultSet rs=psmt.executeQuery("select count(*) from busloan");
+     int z=0,z1=0,z2=0;
+    if(rs.next())
+    {
+       z= rs.getInt(1);
+    }
+    Statement psmt1=con.createStatement();
+    ResultSet rs1=psmt.executeQuery("select sum(zip) from payment");
+    
+    if(rs1.next())
+    {
+       out.println(rs1.getInt(1));
+    }
+    
+   
+
+    
+  }
+    catch(Exception e)
+    {
+      out.println(e);
+    }
+
+
+%>
+                  </p>
                 </div>
 
                 <div class="card3">
-                  <h1>totalsavings</h1>
-                  <p>3900</p>
+                  <h1>Amount Pending</h1>
+                  <p>??</p>
                 </div>
 
                 <div class="card4">
-                  <h1>expenduture</h1>
-                  <p>1881</p>
+                  <h1>profit</h1>
+                  <p>??</p>
                 </div>
               </div>
             </div>
@@ -284,7 +358,7 @@
              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                               <li><a href="/business">Bussiness Loan</a></li>
                               <li><a href="/golder">Gold Loan</a></li>
-                              <li><a href="#">Education loan</a></li>
+                              <li><a href="/educator">Education loan</a></li>
                               
                             </ul>
 
@@ -294,30 +368,18 @@
           </div>
           <div class="sidebar__link">
             <i class="fa fa-building-o"></i>
-            <a href="#">Loan Calculator</a>
+            <a href="#">Payments</a>
+           	
           </div>
          
           
-          <div class="sidebar__link">
-            <i class="fa fa-handshake-o"></i>
-            <a href="#">Contracts</a>
-          </div>
-          <h2>Calender</h2>
+         
+          
           <div class="sidebar__link">
             <i class="fa fa-question"></i>
             <a href="#">Requests</a>
           </div>
-          <div class="sidebar__link">
-            <i class="fa fa-sign-out"></i>
-            <a href="#">Leave Policy</a>
-          </div>
-          <div class="sidebar__link">
-            <i class="fa fa-calendar-check-o"></i>
-            <a href="#">Special Days</a>
-          </div>
-          <div class="sidebar__link">
-            <i class="fa fa-files-o"></i>
-            <a href="#">Apply for loan</a>
+          ply for loan</a>
           </div>
           
           

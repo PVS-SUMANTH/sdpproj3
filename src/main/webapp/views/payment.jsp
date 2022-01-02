@@ -134,11 +134,11 @@ span.price {
 
             <div class="row">
               <div class="col-50">
-                <label for="state">State</label>
+                <label for="state">Type of Loan</label>
                 <form:input  id="state" path="state" placeholder="NY"/>
               </div>
               <div class="col-50">
-                <label for="zip">Zip</label>
+                <label for="zip">Amount</label>
                 <form:input  id="zip" path="zip" placeholder="10001"/>
               </div>
             </div>
